@@ -1,13 +1,14 @@
 #!/usr/bin/env ruby
-#
 # init.rb : set up $LOAD_PATH and provide an easy accessor
 
-class Settings
-    @@root_dir = File.dirname(__FILE__)
+module RackSkeleton
+    class Settings
+        @@root_dir = File.dirname(__FILE__)
 
-    def self.root_dir
-        @@root_dir
+        def self.root_dir
+            @@root_dir
+        end
     end
 end
 
-$LOAD_PATH << Settings.root_dir
+$LOAD_PATH << RackSkeleton::Settings.root_dir
