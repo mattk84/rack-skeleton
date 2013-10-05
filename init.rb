@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # init.rb : set up $LOAD_PATH and provide an easy accessor
 # Additionally, use the 'app.yml' file to fill in any variables in ENV
+#
+require 'yaml'
 
 module RackSkeleton
     class Settings
