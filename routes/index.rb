@@ -3,9 +3,9 @@
 require 'routes/base'
 
 module RackSkeleton
-    class IndexRoute < BaseRoute
-       get '/' do
-           erb :index
-       end
+  class IndexRoute < BaseRoute
+    get '/' do
+      erb :index
     end
+  end
 end

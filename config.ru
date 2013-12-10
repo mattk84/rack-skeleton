@@ -6,16 +6,15 @@ load File.expand_path('init.rb', File.dirname(__FILE__))
 require 'rack'
 require 'sinatra/base'
 
-require 'lib/try_static'
-
 require 'routes/index'
-
-# serve any static files in public/
-# the :try section makes the routes greedily look for HTML files.
-use Rack::TryStatic, :root => "public", :urls => %w[/], :try => ['.html', 'index.html', '/index.html']
+require 'routes/game'
 
 map '/' do
-    run RackSkeleton::IndexRoute.new
+  run RackSkeleton::IndexRoute.new
+end
+
+map '/game' do
+  run RackSkeleton::GameRoute.new
 end
 
 # Run your own Rack app here or use this one to serve 404 messages:
