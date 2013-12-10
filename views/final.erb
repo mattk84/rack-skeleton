@@ -1,17 +1,35 @@
-<html>
-  <head>
-    <title>RPSLite</title>
-  </head>
-  <body>
-    <h1>You chose:</h1>
-    <h2> <%= user_choice %> </h2><br>
-    <h1>They chose:</h1>
-    <h2> <%= ai_choice %> </h2><br>
-    <h1>The result:</h1>
-    <h2> <%= outcome %> </h2><br>
-    
-    <h1>Would you like to play again?</h1><br>
-    <a href="/game"> Yes</a> <a href="http://www.google.com"> No</a>
-    
-  </body>
-</html>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>Match outcome: <%= outcome %></h1>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-6">
+      <h1>You chose:</h1>
+      <h2><%= user_choice %> </h2>
+    </div>
+    <div class="col-md-6">
+      <h1>AI chose:</h1>
+      <h2><%= ai_choice %> </h2>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <h1>Play again?</h1>
+  </div>
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-6">
+      <p><a class="btn btn-success btn-lg btn-block" href="/game" role="button">Let's play! &raquo;</a></p>
+    </div>
+    <div class="col-md-6">
+      <p><a class="btn btn-danger btn-lg btn-block" href="http://www.google.com" role="button">Get me outta here! &raquo;</a></p>
+    </div>
+  </div>
+</div>
